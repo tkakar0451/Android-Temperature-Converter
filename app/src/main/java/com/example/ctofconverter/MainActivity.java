@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.ctofconverter.Utils.Converters;
 import com.example.ctofconverter.databinding.ActivityMainBinding;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String CONVERTED_VALUE_EXTRA_KEY = "MainActivity_Converted_value_double";
@@ -19,9 +21,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        double celsius = getIntent().getDoubleExtra(CONVERTED_VALUE_EXTRA_KEY, 0.0);
+        binding.CelsiusValueEditTextNumberSigned.setText(String.format(Locale.ENGLISH, "%.2f", celsius));
 
         binding.CtoFTitleTextView.setOnClickListener(new View.OnClickListener() {
             @Override
