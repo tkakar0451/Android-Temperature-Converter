@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FtoCActivity">
+
+    <TextView
+        android:id="@+id/FtoC_title_TextView"
+        android:layout_width="275dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:text="@string/fahrenheit_to_celsius_converter"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/FtoC_editText"
+        android:layout_width="275dip"
+        android:layout_height="75dip"
+        android:gravity="center"
+        android:hint="@string/enter_a_value_to_convert"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FtoC_title_TextView"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
